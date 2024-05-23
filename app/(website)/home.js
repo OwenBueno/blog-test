@@ -2,6 +2,8 @@ import Link from "next/link";
 import Container from "@/components/container";
 import PostList from "@/components/postlist";
 
+export const dynamic = "force-dynamic";
+
 export default function Post({ posts }) {
   return (
     <>
