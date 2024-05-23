@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 
 export const runtime = "edge";
 
-export default async function ArchivePage({ searchParams }) {
+export default function ArchivePage({ searchParams }) {
   return (
     <>
       <Container className="relative">
