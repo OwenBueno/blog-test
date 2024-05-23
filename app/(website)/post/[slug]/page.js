@@ -6,6 +6,8 @@ export async function generateStaticParams() {
   return await getAllPostsSlugs();
 }
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata({ params }) {
   const post = await getPostBySlug(params.slug);
   return { title: post.title };

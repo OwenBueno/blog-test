@@ -7,4 +7,5 @@ export default async function AboutPage() {
   return <About settings={settings} authors={authors} />;
 }
 
+export const dynamic = "force-dynamic";
 // export const revalidate = 60;

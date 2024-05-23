@@ -6,4 +6,6 @@ export default async function IndexPage() {
   return <HomePage posts={posts} />;
 }
 
+export const dynamic = "force-dynamic";
+
 // export const revalidate = 60;
