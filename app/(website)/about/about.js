@@ -7,10 +7,10 @@ export default function About({ authors, settings }) {
   return (
     <Container>
       <h1 className="text-brand-primary mb-3 mt-2 text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug">
-        About
+        Sobre nosotros
       </h1>
       <div className="text-center">
-        <p className="text-lg">We are a small passionate team.</p>
+        <p className="text-lg">Somos un equipo apasionado por el software.</p>
       </div>
 
       <div className="mb-16 mt-6 grid grid-cols-3 gap-5 md:mb-32 md:mt-16 md:gap-16">
@@ -38,18 +38,13 @@ export default function About({ authors, settings }) {
 
       <div className="prose mx-auto mt-14 text-center dark:prose-invert">
         <p>
-          We provide real-time connectivity to enable software
-          providers and financial institutions to build integrated
-          products for their small business customers.
+          Nuestro blog provee una visión detrás de escena de cómo el software y mas especificamente las patentes de software están cambiando la forma en que las empresas operan.
         </p>
         <p>
-          Our API infrastructure is leveraged by clients ranging from
-          lenders to corporate card providers and business forecasting
-          tools, with use cases including automatic reconciliation,
-          business dashboarding, and loan decisioning.
+          Nos dedicamos a difundir información sobre las últimas tendencias en tecnología y software. Enfocados en las patentes de software y su impacto en la industria.           Esto nos permite compartir nuestra experiencia y conocimiento con la comunidad.
         </p>
         <p>
-          <Link href="/contact">Get in touch</Link>
+          <Link href="/contact">Localizanos</Link>
         </p>
       </div>
     </Container>

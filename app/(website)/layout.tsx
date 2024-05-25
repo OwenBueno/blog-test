@@ -7,25 +7,20 @@ async function sharedMetaData(params) {
   const settings = await getSettings();
 
   return {
-    // enable this for resolving opengraph image
-    // metadataBase: new URL(settings.url),
     title: {
       default:
-        settings?.title ||
-        "Stablo - Blog Template for Next.js & Sanity CMS",
-      template: "%s | Stablo"
+        "Patentes Del Software - Blog de tecnología y desarrollo de software",
+      template: "%s | PDS"
     },
     description:
-      settings?.description ||
-      "Stablo - popular open-source next.js and sanity blog template",
-    keywords: ["Next.js", "Sanity", "Tailwind CSS"],
-    authors: [{ name: "Surjith" }],
+      "Patentes Del Software - Blog de tecnología y desarrollo de software",
+    keywords: ["Next.js", "Patentes", "Software", "Blog", "Tecnología"],
+    authors: [{ name: "Owen" }],
     canonical: settings?.url,
     openGraph: {
       images: [
         {
           url:
-            urlForImage(settings?.openGraphImage)?.src ||
             "/img/opengraph.jpg",
           width: 800,
           height: 600
@@ -33,7 +28,7 @@ async function sharedMetaData(params) {
       ]
     },
     twitter: {
-      title: settings?.title || "Stablo Template",
+      title: settings?.title || "Patentes Del Software",
       card: "summary_large_image"
     },
     robots: {

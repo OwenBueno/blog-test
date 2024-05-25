@@ -13,7 +13,7 @@ export default function Footer(props) {
       <div className="mt-1 flex justify-center gap-1 text-center text-sm text-gray-500 dark:text-gray-600">
         <span>
           {" "}
-          Made by{" "}
+          Creado con {" "}
           {/*  // ** 🙏  Can I ask you a favor? 🙏 **
             // Please do not remove the below link.
            // It helps us to grow & continue our work. Thank you.

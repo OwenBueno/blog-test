@@ -13,23 +13,16 @@ import { myLoader } from "@/utils/all";
 export default function Navbar(props) {
   const leftmenu = [
     {
-      label: "Home",
+      label: "Pagina principal",
       href: "/"
-    },
-    {
-      label: "About",
-      href: "/about"
     }
+
   ];
 
   const rightmenu = [
     {
-      label: "Archive",
-      href: "/archive"
-    },
-    {
-      label: "Contact",
-      href: "/contact"
+      label: "Sobre nosotros",
+      href: "/about"
     }
   ];
 
@@ -65,19 +58,10 @@ export default function Navbar(props) {
                   ))}
                 </div>
                 <div className="flex w-full items-center justify-between md:w-auto">
-                  <Link href="/" className="w-28 dark:hidden">
-                    {props.logo ? (
-                      <Image
-                        {...urlForImage(props.logo)}
-                        alt="Logo"
-                        priority={true}
-                        sizes="(max-width: 640px) 100vw, 200px"
-                      />
-                    ) : (
-                      <span className="block text-center">
-                        Stablo
-                      </span>
-                    )}
+                  <Link href="/" className="dark:hidden">
+                    <span className="block text-center" style={{fontSize: "1.5rem", fontWeight: "bold"}}>
+                      Patentes Del Software
+                    </span>
                   </Link>
                   <Link href="/" className="hidden w-28 dark:block">
                     {props.logoalt ? (
