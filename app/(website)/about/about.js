@@ -21,9 +21,9 @@ export default function About({ authors, settings }) {
             <div
               style={{ width: "200px" }}
               key={author._id}
-              className="relative aspect-square overflow-hidden rounded-md bg-slate-50 flex flex-col items-center"
+              className="relative aspect-square overflow-hidden rounded-md bg-slate-50 flex flex-col items-center m-2"
             >
-              {isOdd && <h6 className="mb-2 text-2xl">{author.name || "uwu"}</h6>}
+              {isOdd && <h6 className="mb-1 text-large">{author.name || "uwu"}</h6>}
               {imageProps && (
                 <div className="relative w-full h-full">
                   <Image
@@ -35,7 +35,7 @@ export default function About({ authors, settings }) {
                   />
                 </div>
               )}
-              {!isOdd && <h6 className="mb-1 text-2xl">{author.name || "uwu"}</h6>}
+              {!isOdd && <h6 className="mb-1 text-large">{author.name || "uwu"}</h6>}
             </div>
           );
         })}
