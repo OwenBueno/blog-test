@@ -13,24 +13,29 @@ export default function About({ authors, settings }) {
         <p className="text-lg">Somos un equipo apasionado por el software.</p>
       </div>
 
-      <div className="mb-16 mt-6 grid grid-cols-3 gap-5 md:mb-32 md:mt-16 md:gap-16">
-        {authors.slice(0, 3).map(author => {
+      <div className="flex flex-wrap justify-center mt-6">
+        {authors.map((author, index) => {
           const imageProps = urlForImage(author?.image) || null;
+          const isOdd = index % 2 === 0;
           return (
             <div
+              style={{ width: "200px" }}
               key={author._id}
-              className="relative aspect-square overflow-hidden rounded-md bg-slate-50 odd:translate-y-10 odd:md:translate-y-16">
-              <Link href={`/author/${author?.slug}`}>
-                {imageProps && (
+              className="relative aspect-square overflow-hidden rounded-md bg-slate-50 flex flex-col items-center"
+            >
+              {isOdd && <h6 className="mb-2 text-2xl">{author.name || "uwu"}</h6>}
+              {imageProps && (
+                <div className="relative w-full h-full">
                   <Image
-                    src={imageProps?.src}
+                    src={imageProps.src}
                     alt={author?.name || " "}
-                    fill
+                    layout="fill"
                     sizes="(max-width: 320px) 100vw, 320px"
                     className="object-cover"
                   />
-                )}
-              </Link>
+                </div>
+              )}
+              {!isOdd && <h6 className="mb-1 text-2xl">{author.name || "uwu"}</h6>}
             </div>
           );
         })}
